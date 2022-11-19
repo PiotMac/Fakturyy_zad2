@@ -27,15 +27,6 @@ public final class Faktura
         {
             throw new BadDataException();
         }
-        //Sprawdzanie miejsc po przecinku
-        String check = Double.toString( cena );
-        final int decimalPoint = 3;
-        int integerPlaces = check.indexOf( '.' );
-        int decimalPlaces = check.length() - integerPlaces - 1;
-        if ( decimalPlaces >= decimalPoint )
-        {
-            throw new BadDataException();
-        }
         Towar towarDoElementu = new Towar( artykul, cena );
         Element element = new Element( ilosc, towarDoElementu );
         elementy.add( element );

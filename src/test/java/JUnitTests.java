@@ -5,7 +5,7 @@ import org.junit.Test;
 public class JUnitTests
 {
     @Test
-    public void testPriceBrutto()
+    public void testPriceBrutto() throws BadDataException
     {
         int ilosc = 12345;
         double cena = 212.26;
